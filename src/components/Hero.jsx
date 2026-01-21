@@ -48,12 +48,13 @@ const Hero = () => {
 
           {/* Resume Button */}
           <a
-            href="/public/Shakib_Ahmmed_MERN_Resume.pdf"
+            href="/Shakib_Ahmmed_MERN_Resume.pdf"
             download
             className="inline-block px-6 py-3 rounded-lg bg-cyan-500 text-black font-semibold hover:bg-cyan-400 transition shadow-lg"
           >
             Download Resume
           </a>
+
 
           {/* Social Links */}
           <div className="flex gap-6 mt-6 justify-center md:justify-start">
