@@ -11,11 +11,13 @@ const ProjectDetail = () => {
     <div className="max-w-4xl mx-auto px-6 py-20 text-white">
       <h2 className="text-4xl font-bold mb-6 text-center">{project.name}</h2>
 
+      {/* Image */}
       <img
         src={project.image}
         alt={project.name}
-        className="w-full h-64 md:h-96 object-cover rounded-xl shadow-lg mb-6"
+        className="w-full h-auto object-contain rounded-xl shadow-lg mb-6"
       />
+
 
       {/* Tech Stack */}
       <div className="flex flex-wrap gap-3 mb-6">
