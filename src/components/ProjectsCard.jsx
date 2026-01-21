@@ -62,12 +62,14 @@ const ProjectCard = ({ project }) => {
         </div>
 
         {/* Optional Details Page */}
-        <Link
-          to={`/projects/${project.id}`}
-          className="text-cyan-400 hover:underline text-sm mt-2"
-        >
-          View Details →
-        </Link>
+        <div className="mt-4">
+          <Link
+            to={`/projects/${project.id}`}
+            className="inline-block px-5 py-2 rounded-md text-sm font-semibold bg-gray-800/50 text-cyan-400 hover:bg-cyan-500 hover:text-black hover:shadow-[0_0_10px_cyan] transition"
+          >
+            View Details →
+          </Link>
+        </div>
       </div>
     </motion.div>
   );
