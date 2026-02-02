@@ -1,40 +1,58 @@
 import React from "react";
 import { motion } from "framer-motion";
+import {
+  FaReact,
+  FaNodeJs,
+  FaHtml5,
+  FaCss3Alt,
+  FaJs,
+  FaDatabase,
+} from "react-icons/fa";
+
+const techStack = [
+  { icon: <FaHtml5 />, name: "HTML5", color: "text-orange-400" },
+  { icon: <FaCss3Alt />, name: "CSS3", color: "text-blue-400" },
+  { icon: <FaJs />, name: "JavaScript", color: "text-yellow-400" },
+  { icon: <FaReact />, name: "React", color: "text-cyan-400" },
+  { icon: <FaNodeJs />, name: "Node.js", color: "text-green-400" },
+  { icon: <FaDatabase />, name: "MongoDB", color: "text-emerald-400" },
+];
 
 const About = () => {
   return (
     <section
       id="about"
-      className="relative max-w-7xl mx-auto px-6 py-32"
+      className="relative max-w-7xl mx-auto px-6 py-36"
     >
-      {/* Background Glow */}
-      <div className="absolute -top-40 -left-40 w-96 h-96 bg-indigo-500/20 rounded-full blur-3xl" />
-      <div className="absolute top-1/3 -right-40 w-96 h-96 bg-pink-500/20 rounded-full blur-3xl" />
+      {/* Background Glows */}
+      <div className="absolute -top-40 -left-40 w-96 h-96 bg-indigo-500/30 rounded-full blur-3xl" />
+      <div className="absolute top-1/3 -right-40 w-96 h-96 bg-pink-500/30 rounded-full blur-3xl" />
+      <div className="absolute bottom-0 left-1/3 w-96 h-96 bg-purple-500/20 rounded-full blur-3xl" />
 
       {/* Header */}
       <motion.div
         initial={{ opacity: 0, y: 40 }}
         whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.7 }}
+        transition={{ duration: 0.8 }}
         viewport={{ once: true }}
-        className="relative text-center mb-20"
+        className="relative text-center mb-24"
       >
-        <h2 className="text-4xl md:text-6xl font-extrabold mb-6 bg-gradient-to-r from-indigo-400 via-pink-400 to-purple-500 bg-clip-text text-transparent">
+        <h2 className="text-5xl md:text-6xl font-extrabold mb-6 bg-gradient-to-r from-indigo-400 via-pink-400 to-purple-500 bg-[length:200%_200%] bg-clip-text text-transparent animate-gradient">
           About Me
         </h2>
         <p className="text-slate-300 text-lg max-w-3xl mx-auto">
-          Building modern, high-performance web experiences with creativity,
-          precision, and passion.
+          I design and build high-quality web experiences with performance,
+          aesthetics, and scalability in mind.
         </p>
       </motion.div>
 
-      {/* Content */}
-      <div className="relative grid md:grid-cols-2 gap-14 items-start">
-        {/* Left */}
+      {/* Main Content */}
+      <div className="relative grid md:grid-cols-2 gap-16 items-start">
+        {/* Left Text */}
         <motion.div
-          initial={{ opacity: 0, x: -50 }}
+          initial={{ opacity: 0, x: -60 }}
           whileInView={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.7 }}
+          transition={{ duration: 0.8 }}
           viewport={{ once: true }}
         >
           <p className="text-slate-300 text-lg leading-relaxed mb-6">
@@ -42,98 +60,104 @@ const About = () => {
             <span className="text-indigo-400 font-semibold">
               HTML, CSS, and JavaScript
             </span>
-            , where I learned how the web truly works. That foundation helped me
-            transition into modern frameworks and backend technologies.
+            . I enjoy understanding how things work under the hood and turning
+            ideas into interactive digital products.
           </p>
 
           <p className="text-slate-300 text-lg leading-relaxed mb-6">
-            I specialize in building applications using{" "}
+            I specialize in building applications with{" "}
             <span className="text-pink-400 font-semibold">
               React, Node.js, Express, and MongoDB
             </span>
-            , focusing on performance, scalability, and clean architecture. I
-            enjoy turning complex problems into elegant solutions.
+            , focusing on clean architecture, performance optimization, and
+            maintainable code.
           </p>
 
           <p className="text-slate-300 text-lg leading-relaxed">
-            Beyond code, I care deeply about{" "}
+            I care deeply about{" "}
             <span className="text-purple-400 font-semibold">
-              user experience, accessibility, and visual polish
+              UI/UX, accessibility, and modern design
             </span>
-            . I’m constantly learning, experimenting, and pushing my skills to
-            the next level.
+            . I’m constantly learning, experimenting, and pushing my skills
+            forward.
           </p>
         </motion.div>
 
         {/* Right Card */}
         <motion.div
-          initial={{ opacity: 0, x: 50 }}
+          initial={{ opacity: 0, x: 60 }}
           whileInView={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.7 }}
+          transition={{ duration: 0.8 }}
           viewport={{ once: true }}
-          className="relative rounded-2xl p-8 bg-gradient-to-br from-slate-900/80 to-slate-800/50 border border-indigo-500/20 shadow-lg shadow-indigo-500/10"
+          className="relative p-8 rounded-2xl bg-slate-900/70 border border-indigo-500/30 shadow-xl shadow-indigo-500/10 backdrop-blur"
         >
           <h3 className="text-2xl font-semibold text-white mb-6">
-            What I Do Best
+            What I Focus On
           </h3>
 
           <ul className="space-y-4 text-slate-300 text-lg">
-            <li className="flex gap-3">
-              <span className="text-indigo-400">⚡</span>
-              High-performance, responsive UI development
-            </li>
-            <li className="flex gap-3">
-              <span className="text-pink-400">🧩</span>
-              Scalable full-stack architecture
-            </li>
-            <li className="flex gap-3">
-              <span className="text-purple-400">🎯</span>
-              Clean, maintainable, optimized code
-            </li>
-            <li className="flex gap-3">
-              <span className="text-indigo-400">🚀</span>
-              Continuous learning & improvement
-            </li>
-            <li className="flex gap-3">
-              <span className="text-pink-400">🤝</span>
-              Team collaboration & problem solving
-            </li>
+            <li>⚡ High-performance, responsive UI</li>
+            <li>🧠 Scalable full-stack architecture</li>
+            <li>🎨 Pixel-perfect modern design</li>
+            <li>🚀 Optimization & best practices</li>
+            <li>🤝 Teamwork & problem solving</li>
           </ul>
         </motion.div>
       </div>
+
+      {/* Tech Stack */}
+      <motion.div
+        initial={{ opacity: 0, y: 40 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8 }}
+        viewport={{ once: true }}
+        className="relative mt-28"
+      >
+        <h3 className="text-3xl font-bold text-white text-center mb-12">
+          Tech Stack
+        </h3>
+
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8">
+          {techStack.map((tech, i) => (
+            <motion.div
+              key={i}
+              whileHover={{ scale: 1.08 }}
+              className="group relative flex flex-col items-center justify-center gap-3 p-6 rounded-xl bg-slate-900/60 border border-slate-700 hover:border-indigo-400 transition-all duration-300 shadow-md hover:shadow-indigo-500/20"
+            >
+              <div
+                className={`text-4xl ${tech.color} group-hover:drop-shadow-[0_0_10px_currentColor]`}
+              >
+                {tech.icon}
+              </div>
+              <p className="text-slate-300 font-medium">
+                {tech.name}
+              </p>
+            </motion.div>
+          ))}
+        </div>
+      </motion.div>
 
       {/* Stats */}
       <motion.div
         initial={{ opacity: 0, y: 40 }}
         whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.7, delay: 0.2 }}
+        transition={{ duration: 0.8, delay: 0.2 }}
         viewport={{ once: true }}
-        className="relative grid grid-cols-2 md:grid-cols-4 gap-10 mt-24 text-center"
+        className="relative grid grid-cols-2 md:grid-cols-4 gap-10 mt-28 text-center"
       >
-        <div>
-          <h4 className="text-4xl font-extrabold bg-gradient-to-r from-indigo-400 to-pink-400 bg-clip-text text-transparent">
-            10+
-          </h4>
-          <p className="text-slate-400 mt-2">Projects</p>
-        </div>
-        <div>
-          <h4 className="text-4xl font-extrabold bg-gradient-to-r from-pink-400 to-purple-400 bg-clip-text text-transparent">
-            1+
-          </h4>
-          <p className="text-slate-400 mt-2">Years Learning</p>
-        </div>
-        <div>
-          <h4 className="text-4xl font-extrabold bg-gradient-to-r from-purple-400 to-indigo-400 bg-clip-text text-transparent">
-            5+
-          </h4>
-          <p className="text-slate-400 mt-2">Technologies</p>
-        </div>
-        <div>
-          <h4 className="text-4xl font-extrabold bg-gradient-to-r from-indigo-400 to-purple-500 bg-clip-text text-transparent">
-            100%
-          </h4>
-          <p className="text-slate-400 mt-2">Passion</p>
-        </div>
+        {[
+          { value: "10+", label: "Projects" },
+          { value: "1+", label: "Years Learning" },
+          { value: "5+", label: "Core Tech" },
+          { value: "100%", label: "Passion" },
+        ].map((stat, i) => (
+          <div key={i}>
+            <h4 className="text-4xl font-extrabold bg-gradient-to-r from-indigo-400 to-pink-400 bg-clip-text text-transparent">
+              {stat.value}
+            </h4>
+            <p className="text-slate-400 mt-2">{stat.label}</p>
+          </div>
+        ))}
       </motion.div>
     </section>
   );
