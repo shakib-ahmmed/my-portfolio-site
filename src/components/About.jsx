@@ -146,8 +146,8 @@ const About = () => {
         className="relative grid grid-cols-2 md:grid-cols-4 gap-10 mt-28 text-center"
       >
         {[
-          { value: "10+", label: "Projects" },
-          { value: "1+", label: "Years Learning" },
+          { value: "18+", label: "Projects" },
+          { value: "2+", label: "Years Learning" },
           { value: "5+", label: "Core Tech" },
           { value: "100%", label: "Passion" },
         ].map((stat, i) => (
