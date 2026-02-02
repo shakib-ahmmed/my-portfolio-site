@@ -1,85 +1,74 @@
-import React, { useState } from "react";
+import React from "react";
+import { motion } from "framer-motion";
+import {
+  FaGithub,
+  FaLinkedin,
+  FaFacebook,
+  FaEnvelope,
+} from "react-icons/fa";
 
-const Contact = () => {
-  const [form, setForm] = useState({ name: "", email: "", message: "" });
-
-  const handleChange = (e) =>
-    setForm({ ...form, [e.target.name]: e.target.value });
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    alert("Message submitted! (Connect backend to save messages)");
-  };
-
+const Footer = () => {
   return (
-    <section
-      id="contact"
-      className="px-6 py-24 max-w-7xl mx-auto"
-    >
-      <h2 className="text-4xl font-extrabold text-center mb-12 bg-gradient-to-r`npm from-indigo-400 to-pink-400 bg-clip-text text-transparent">
-        Contact Me
-      </h2>
+    <footer className="relative border-t border-slate-800 mt-24">
+      {/* Glow */}
+      <div className="absolute left-1/2 -top-24 -translate-x-1/2 w-72 h-72 bg-indigo-500/20 blur-3xl rounded-full" />
 
-      <div className="grid md:grid-cols-2 gap-12">
-        {/* Form */}
-        <form
-          onSubmit={handleSubmit}
-          className="space-y-5 bg-gray-900/70 backdrop-blur rounded-2xl p-8 shadow-lg border border-white/10"
-        >
-          <input
-            type="text"
-            name="name"
-            placeholder="Your Name"
-            value={form.name}
-            onChange={handleChange}
-            className="w-full p-3 rounded-lg bg-gray-800 border border-white/10 text-gray-100 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-indigo-500"
-          />
+      <motion.div
+        initial={{ opacity: 0, y: 30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6 }}
+        viewport={{ once: true }}
+        className="relative max-w-7xl mx-auto px-6 py-10 text-center"
+      >
+        {/* Name */}
+        <h3 className="text-lg font-semibold bg-gradient-to-r from-indigo-400 to-pink-400 bg-clip-text text-transparent">
+          Shakib Ahmmed
+        </h3>
 
-          <input
-            type="email"
-            name="email"
-            placeholder="Your Email"
-            value={form.email}
-            onChange={handleChange}
-            className="w-full p-3 rounded-lg bg-gray-800 border border-white/10 text-gray-100 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-indigo-500"
-          />
-
-          <textarea
-            name="message"
-            placeholder="Your Message"
-            value={form.message}
-            onChange={handleChange}
-            className="w-full p-3 rounded-lg bg-gray-800 border border-white/10 text-gray-100 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-indigo-500 h-36 resize-none"
-          />
-
-          <button
-            type="submit"
-            className="w-full py-3 rounded-lg font-semibold text-white bg-gradient-to-r from-indigo-500 to-pink-500 hover:opacity-90 transition"
+        {/* Social Links */}
+        <div className="flex justify-center gap-6 mt-4">
+          <a
+            href="https://github.com/shakib-ahmmed"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-slate-400 hover:text-indigo-400 transition"
           >
-            Send Message
-          </button>
-        </form>
+            <FaGithub size={20} />
+          </a>
 
-        {/* Contact Info */}
-        <div className="space-y-6 text-gray-300 flex flex-col justify-center">
-          <div className="p-6 rounded-xl bg-gray-900/60 border border-white/10 shadow">
-            <p className="text-sm uppercase tracking-widest text-indigo-400">Email</p>
-            <p className="text-lg">shakibahmmed1@gmail.com</p>
-          </div>
+          <a
+            href="https://www.linkedin.com/in/shakib-ahmmed1/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-slate-400 hover:text-blue-400 transition"
+          >
+            <FaLinkedin size={20} />
+          </a>
 
-          <div className="p-6 rounded-xl bg-gray-900/60 border border-white/10 shadow">
-            <p className="text-sm uppercase tracking-widest text-indigo-400">Phone</p>
-            <p className="text-lg">+8801818114159</p>
-          </div>
+          <a
+            href="https://www.facebook.com/shakib.uav/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-slate-400 hover:text-pink-400 transition"
+          >
+            <FaFacebook size={20} />
+          </a>
 
-          <div className="p-6 rounded-xl bg-gray-900/60 border border-white/10 shadow">
-            <p className="text-sm uppercase tracking-widest text-indigo-400">WhatsApp</p>
-            <p className="text-lg">+8801818114159</p>
-          </div>
+          <a
+            href="mailto:shakibahmmed1@gmail.com"
+            className="text-slate-400 hover:text-purple-400 transition"
+          >
+            <FaEnvelope size={20} />
+          </a>
         </div>
-      </div>
-    </section>
+
+        {/* Copyright */}
+        <p className="text-slate-500 text-sm mt-6">
+          © 2026 Shakib Ahmmed. All rights reserved.
+        </p>
+      </motion.div>
+    </footer>
   );
 };
 
-export default Contact;
+export default Footer;
