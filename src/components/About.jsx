@@ -5,53 +5,108 @@ const About = () => {
   return (
     <section
       id="about"
-      className="max-w-7xl mx-auto px-6 py-24 text-center"
+      className="max-w-7xl mx-auto px-6 py-32"
     >
-      {/* Title */}
-      <motion.h2
-        initial={{ opacity: 0, y: 30 }}
+      {/* Section Header */}
+      <motion.div
+        initial={{ opacity: 0, y: 40 }}
         whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6, ease: "easeOut" }}
+        transition={{ duration: 0.7 }}
         viewport={{ once: true }}
-        className="text-3xl md:text-4xl font-bold text-white mb-8"
+        className="text-center mb-16"
       >
-        About Me
-      </motion.h2>
+        <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+          About Me
+        </h2>
+        <p className="text-slate-400 text-lg max-w-3xl mx-auto">
+          A passionate developer focused on building modern, scalable, and
+          impactful digital experiences.
+        </p>
+      </motion.div>
 
-      {/* Paragraph 1 */}
-      <motion.p
-        initial={{ opacity: 0, y: 30 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6, delay: 0.2 }}
-        viewport={{ once: true }}
-        className="text-slate-400 text-lg leading-relaxed max-w-3xl mx-auto mb-6"
-      >
-        I’m a passionate web developer who started my journey with{" "}
-        <span className="text-white font-medium">
-          HTML, CSS, and JavaScript
-        </span>
-        . Over time, I’ve built real-world projects using{" "}
-        <span className="text-white font-medium">
-          React, Node.js, and MongoDB
-        </span>
-        , focusing on clean code and scalable solutions.
-      </motion.p>
+      {/* Content */}
+      <div className="grid md:grid-cols-2 gap-12 items-start">
+        {/* Left Content */}
+        <motion.div
+          initial={{ opacity: 0, x: -40 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.7 }}
+          viewport={{ once: true }}
+        >
+          <p className="text-slate-400 text-lg leading-relaxed mb-6">
+            I began my programming journey by learning{" "}
+            <span className="text-white font-medium">
+              HTML, CSS, and JavaScript
+            </span>
+            , developing a strong foundation in web fundamentals. As my
+            curiosity grew, I expanded into modern frameworks and backend
+            technologies to build complete, real-world applications.
+          </p>
 
-      {/* Paragraph 2 */}
-      <motion.p
-        initial={{ opacity: 0, y: 30 }}
+          <p className="text-slate-400 text-lg leading-relaxed mb-6">
+            I have hands-on experience working with{" "}
+            <span className="text-white font-medium">
+              React, Node.js, Express, and MongoDB
+            </span>
+            , creating responsive user interfaces, REST APIs, and full-stack
+            solutions. I focus on writing clean, maintainable code and following
+            best practices.
+          </p>
+
+          <p className="text-slate-400 text-lg leading-relaxed">
+            My goal is to continuously improve as a developer, stay updated
+            with emerging technologies, and contribute to meaningful projects
+            that solve real-world problems and deliver great user experiences.
+          </p>
+        </motion.div>
+
+        {/* Right Highlights */}
+        <motion.div
+          initial={{ opacity: 0, x: 40 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.7 }}
+          viewport={{ once: true }}
+          className="bg-slate-900/50 border border-slate-800 rounded-2xl p-8"
+        >
+          <h3 className="text-2xl font-semibold text-white mb-6">
+            What I Focus On
+          </h3>
+
+          <ul className="space-y-4 text-slate-400 text-lg">
+            <li>⚡ Building fast, responsive, and accessible web interfaces</li>
+            <li>🧩 Developing scalable full-stack applications</li>
+            <li>🎯 Writing clean, optimized, and maintainable code</li>
+            <li>🚀 Continuous learning and performance optimization</li>
+            <li>🤝 Collaboration, communication, and problem solving</li>
+          </ul>
+        </motion.div>
+      </div>
+
+      {/* Stats */}
+      <motion.div
+        initial={{ opacity: 0, y: 40 }}
         whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6, delay: 0.4 }}
+        transition={{ duration: 0.7, delay: 0.2 }}
         viewport={{ once: true }}
-        className="text-slate-400 text-lg leading-relaxed max-w-3xl mx-auto"
+        className="grid grid-cols-2 md:grid-cols-4 gap-8 mt-20 text-center"
       >
-        I love crafting{" "}
-        <span className="text-white font-medium">
-          modern, responsive, and user-friendly
-        </span>{" "}
-        web applications. I’m always eager to learn new technologies, improve my
-        skills, and turn ideas into meaningful digital experiences.
-      </motion.p>
+        <div>
+          <h4 className="text-4xl font-bold text-white">10+</h4>
+          <p className="text-slate-400 mt-2">Projects Built</p>
+        </div>
+        <div>
+          <h4 className="text-4xl font-bold text-white">1+</h4>
+          <p className="text-slate-400 mt-2">Years Learning</p>
+        </div>
+        <div>
+          <h4 className="text-4xl font-bold text-white">5+</h4>
+          <p className="text-slate-400 mt-2">Technologies</p>
+        </div>
+        <div>
+          <h4 className="text-4xl font-bold text-white">100%</h4>
+          <p className="text-slate-400 mt-2">Dedication</p>
+        </div>
+      </motion.div>
     </section>
   );
 };
