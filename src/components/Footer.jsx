@@ -11,7 +11,6 @@ import {
 const Footer = () => {
   const [showTop, setShowTop] = useState(false);
 
-  // Scroll-to-top visibility
   useEffect(() => {
     const onScroll = () => setShowTop(window.scrollY > 300);
     window.addEventListener("scroll", onScroll);
@@ -31,27 +30,27 @@ const Footer = () => {
         className="relative max-w-7xl mx-auto px-6 py-6 text-center"
       >
         {/* Name */}
-        <h3 className="text-base font-semibold bg-gradient-to-r from-indigo-400 to-pink-400 bg-clip-text text-transparent">
+        <h3 className="text-lg font-semibold bg-gradient-to-r from-indigo-400 to-pink-400 bg-clip-text text-transparent">
           Shakib Ahmmed
         </h3>
 
         {/* Status */}
         <div className="flex justify-center items-center gap-2 mt-1">
           <span className="w-2 h-2 bg-green-400 rounded-full animate-pulse" />
-          <p className="text-slate-400 text-xs">
+          <p className="text-slate-400 text-sm">
             Available for opportunities
           </p>
         </div>
 
         {/* Social Links */}
-        <div className="flex justify-center gap-5 mt-3">
+        <div className="flex justify-center gap-6 mt-4">
           <a
             href="https://github.com/shakib-ahmmed"
             target="_blank"
             rel="noopener noreferrer"
             className="text-slate-400 hover:text-indigo-400 transition"
           >
-            <FaGithub size={18} />
+            <FaGithub size={20} />
           </a>
           <a
             href="https://www.linkedin.com/in/shakib-ahmmed1/"
@@ -59,7 +58,7 @@ const Footer = () => {
             rel="noopener noreferrer"
             className="text-slate-400 hover:text-blue-400 transition"
           >
-            <FaLinkedin size={18} />
+            <FaLinkedin size={20} />
           </a>
           <a
             href="https://www.facebook.com/shakib.uav/"
@@ -67,18 +66,18 @@ const Footer = () => {
             rel="noopener noreferrer"
             className="text-slate-400 hover:text-pink-400 transition"
           >
-            <FaFacebook size={18} />
+            <FaFacebook size={20} />
           </a>
           <a
             href="mailto:shakibahmmed1@gmail.com"
             className="text-slate-400 hover:text-purple-400 transition"
           >
-            <FaEnvelope size={18} />
+            <FaEnvelope size={20} />
           </a>
         </div>
 
         {/* Copyright */}
-        <p className="text-slate-500 text-xs mt-4">
+        <p className="text-slate-500 text-sm mt-4">
           © 2026 Shakib Ahmmed. All rights reserved.
         </p>
       </motion.div>
