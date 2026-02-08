@@ -16,11 +16,8 @@ const Contact = () => {
 
     emailjs
       .send(
-        "YOUR_SERVICE_ID", // replace with your EmailJS service ID
-        "YOUR_TEMPLATE_ID", // replace with your EmailJS template ID
-        form,
-        "YOUR_PUBLIC_KEY" // replace with your EmailJS public key
-      )
+
+    )
       .then(
         () => {
           alert("Message sent successfully!");
