@@ -10,7 +10,7 @@ const Hero = () => {
       {/* Galaxy Background */}
       <GalaxyBG />
 
-      {/* Full-screen Transparent Overlay */}
+     
       <div className="absolute inset-0 bg-black/30 backdrop-blur-sm z-10 flex flex-col md:flex-row items-center justify-center gap-12 p-8">
         {/* Text Content */}
         <div className="text-center md:text-left max-w-xl flex-1">
