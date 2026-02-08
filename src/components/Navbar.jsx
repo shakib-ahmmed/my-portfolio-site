@@ -84,14 +84,14 @@ const Navbar = () => {
         </RouterLink>
 
         {/* Desktop Menu */}
-        <div className="hidden md:flex items-center space-x-6 text-sm font-semibold">
+        <div className="hidden md:flex cursor-pointer items-center space-x-6 text-sm font-semibold">
           {sections.map((section) => (
             <button
               key={section.name}
               onClick={() => handleLinkClick(section.name)}
               className={`flex items-center gap-1 px-3 py-1 rounded hover:bg-[#1e293b]/50 transition-colors cursor-pointer ${activeSection === section.name
-                  ? "bg-[#1e293b]/70 text-cyan-400 font-bold shadow-[0_0_10px_cyan]"
-                  : "text-slate-300 hover:text-cyan-400"
+                ? "bg-[#1e293b]/70 text-cyan-400 font-bold shadow-[0_0_10px_cyan]"
+                : "text-slate-300 hover:text-cyan-400"
                 }`}
             >
               <span>{section.icon}</span>
@@ -131,8 +131,8 @@ const Navbar = () => {
               key={section.name}
               onClick={() => handleLinkClick(section.name)}
               className={`flex items-center gap-2 px-4 py-2 text-slate-300 font-semibold rounded hover:bg-[#1e293b]/50 hover:text-cyan-400 transition cursor-pointer ${activeSection === section.name
-                  ? "bg-[#1e293b]/70 text-cyan-400 font-bold shadow-[0_0_10px_cyan]"
-                  : ""
+                ? "bg-[#1e293b]/70 text-cyan-400 font-bold shadow-[0_0_10px_cyan]"
+                : ""
                 }`}
             >
               {section.icon}
