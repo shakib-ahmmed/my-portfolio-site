@@ -18,8 +18,6 @@ const ProjectDetail = () => {
         className="w-full h-auto object-contain rounded-xl shadow-lg mb-6"
       />
 
-
-      {/* Tech Stack */}
       <div className="flex flex-wrap gap-3 mb-6">
         {project.tech.map((tech, idx) => (
           <span
@@ -31,14 +29,12 @@ const ProjectDetail = () => {
         ))}
       </div>
 
-      {/* Description */}
       <ul className="list-disc list-inside mb-6 space-y-1">
         {project.description.map((desc, idx) => (
           <li key={idx}>{desc}</li>
         ))}
       </ul>
 
-     
       <div className="flex flex-wrap gap-4">
         <a
           href={project.live || "#"}
