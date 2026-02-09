@@ -137,11 +137,10 @@ const Contact = () => {
         </div>
       </motion.div>
 
-      {/* Background Glow Blobs */}
       <div className="absolute -top-32 -left-40 w-96 h-96 bg-indigo-500/20 rounded-full blur-3xl animate-float" />
       <div className="absolute bottom-0 -right-40 w-96 h-96 bg-pink-500/20 rounded-full blur-3xl animate-float2" />
 
-      {/* Floating Animation Styles */}
+
       <style>{`
         @keyframes float { 0%,100%{transform: translateY(0);}50%{transform: translateY(-20px);} }
         @keyframes float2 { 0%,100%{transform: translateY(0);}50%{transform: translateY(-15px);} }
