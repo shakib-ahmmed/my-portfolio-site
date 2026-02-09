@@ -38,7 +38,7 @@ const ProjectDetail = () => {
         ))}
       </ul>
 
-      {/* Buttons */}
+     
       <div className="flex flex-wrap gap-4">
         <a
           href={project.live || "#"}
