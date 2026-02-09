@@ -101,9 +101,7 @@ const Contact = () => {
           </button>
         </form>
 
-        {/* Contact Info & Socials */}
         <div className="flex flex-col justify-center gap-6">
-          {/* Info Cards */}
           {[
             { label: "Email", value: "shakibahmmed1@gmail.com" },
             { label: "Phone", value: "+8801818114159" },
